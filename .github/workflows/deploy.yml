@@ -29,6 +29,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check env vars
+        run: |
+          echo "Formspree set: ${{ secrets.NEXT_PUBLIC_FORMSPREE_ENDPOINT != '' }}"
+          echo "Calcom set: ${{ secrets.NEXT_PUBLIC_CALCOM_LINK != '' }}"
+
       - name: Build
         run: npm run build
         env:
