@@ -7,8 +7,8 @@ export const personal = {
   email: "abdulhaseeb.soomro8@gmail.com",
   linkedin: "https://linkedin.com/in/abdulhaseeb22",
   github: "https://github.com/AbdulHaseeb22",
-  available: true,
-  availableText: "Available for freelance",
+  available: false,
+  availableText: "",
   positioning:
     "I build production-grade backend systems and AI-powered products across Java, Spring Boot, Python, FastAPI and React.",
   about: [

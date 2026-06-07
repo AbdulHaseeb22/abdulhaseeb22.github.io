@@ -46,29 +46,7 @@ export default function Hero() {
         >
           {/* Left column */}
           <div className="flex flex-col gap-6">
-            {/* Availability badge */}
-            {personal.available && (
-              <ScrollReveal delay={0}>
-                <div className="inline-flex items-center gap-2.5">
-                  <span className="relative inline-flex items-center justify-center w-4 h-4">
-                    <span
-                      className="pulse-ring absolute inset-0 rounded-full"
-                      style={{ backgroundColor: "rgba(34,197,94,0.35)" }}
-                    />
-                    <span
-                      className="relative z-10 w-2 h-2 rounded-full"
-                      style={{ backgroundColor: "#22c55e" }}
-                    />
-                  </span>
-                  <span
-                    className="text-sm font-medium"
-                    style={{ color: "var(--text-2)" }}
-                  >
-                    {personal.availableText}
-                  </span>
-                </div>
-              </ScrollReveal>
-            )}
+
 
             {/* Name */}
             <ScrollReveal delay={1}>
