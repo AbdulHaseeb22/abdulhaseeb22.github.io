@@ -25,7 +25,7 @@ function CubeIcon() {
   );
 }
 
-function ChatIcon() {
+function HomeIcon() {
   return (
     <svg
       width="20"
@@ -38,7 +38,58 @@ function ChatIcon() {
       strokeLinejoin="round"
       aria-hidden
     >
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  );
+}
+
+function BrainIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <rect x="9" y="9" width="6" height="6" />
+      <line x1="9" y1="1" x2="9" y2="4" />
+      <line x1="15" y1="1" x2="15" y2="4" />
+      <line x1="9" y1="20" x2="9" y2="23" />
+      <line x1="15" y1="20" x2="15" y2="23" />
+      <line x1="20" y1="9" x2="23" y2="9" />
+      <line x1="20" y1="14" x2="23" y2="14" />
+      <line x1="1" y1="9" x2="4" y2="9" />
+      <line x1="1" y1="14" x2="4" y2="14" />
+    </svg>
+  );
+}
+
+function NetworkIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <circle cx="12" cy="4" r="2" />
+      <circle cx="4" cy="20" r="2" />
+      <circle cx="20" cy="20" r="2" />
+      <line x1="12" y1="6" x2="4" y2="18" />
+      <line x1="12" y1="6" x2="20" y2="18" />
+      <line x1="6" y1="20" x2="18" y2="20" />
     </svg>
   );
 }
@@ -117,7 +168,7 @@ function ProjectCard({ project, delay }: ProjectCardProps) {
               color: "var(--accent)",
             }}
           >
-            {project.iconType === "cube" ? <CubeIcon /> : <ChatIcon />}
+            {{ cube: <CubeIcon />, home: <HomeIcon />, brain: <BrainIcon />, network: <NetworkIcon /> }[project.iconType] ?? <CubeIcon />}
           </div>
 
           <div className="flex items-center gap-3">

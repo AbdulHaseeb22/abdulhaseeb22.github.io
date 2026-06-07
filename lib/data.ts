@@ -10,15 +10,15 @@ export const personal = {
   available: true,
   availableText: "Available for freelance",
   positioning:
-    "I build production-grade backend systems and AI-powered products — Java/Spring Boot, Python/FastAPI, React/Next.js.",
+    "I build production-grade backend systems and AI-powered products across Java, Spring Boot, Python, FastAPI and React.",
   about: [
-    "I'm a software engineer with an MSc in Artificial Intelligence from FAU Erlangen and around three years building scalable backend systems and AI integrations in production.",
-    "I'm most at home designing resilient services and event-driven architectures — Spring Boot, Quarkus, Kafka — but I'm equally comfortable shipping the React/Next.js front end that sits on top of them. Lately that means weaving LLMs and retrieval into real products rather than demos.",
+    "I am a software engineer with an MSc in Artificial Intelligence from FAU Erlangen and around three years building scalable backend systems and AI integrations in production.",
+    "My sweet spot is designing resilient services and event-driven architectures with Spring Boot, Quarkus and Kafka, though I am equally comfortable shipping the React or Next.js frontend on top. Lately that means weaving LLMs and retrieval into real products rather than demos.",
   ],
   stats: [
     { num: "3+", label: "Years in production" },
     { num: "MSc", label: "Artificial Intelligence" },
-    { num: "Full-stack", label: "Backend → frontend → AI" },
+    { num: "Full-stack", label: "Backend to frontend to AI" },
   ],
 };
 
@@ -31,7 +31,7 @@ export const experiences = [
     period: "Nov 2024 – May 2025",
     current: true,
     description:
-      "Built a real-time manufacturing intelligence platform on Quarkus & Spring Boot microservices with Kafka event pipelines and Angular dashboards, plus a Spring AI LLM assistant that let plant teams query production data in natural language.",
+      "Built a real-time manufacturing intelligence platform on Quarkus and Spring Boot microservices with Kafka event pipelines and Angular dashboards, plus a Spring AI assistant that let plant teams query production data in natural language.",
     tags: ["Quarkus", "Spring Boot", "Kafka", "Angular", "Spring AI"],
   },
   {
@@ -42,7 +42,7 @@ export const experiences = [
     period: "Feb 2023 – Feb 2024",
     current: false,
     description:
-      'Owned the end-to-end "Feature Inbox" call-management product — designing REST APIs consumed by a React/Next.js front end, backed by ElasticSearch search, AWS Lambda/S3, and Twilio for telephony.',
+      "Owned the end-to-end Feature Inbox call-management product, designing REST APIs consumed by a React and Next.js frontend, backed by ElasticSearch, AWS Lambda and S3, and Twilio for telephony.",
     tags: [
       "REST APIs",
       "React / Next.js",
@@ -59,7 +59,7 @@ export const experiences = [
     period: "Aug 2021 – Oct 2022",
     current: false,
     description:
-      "Shaped enterprise platform architecture with Spring Boot and React/Angular on AWS, including a real-time WebSocket group-chat system built to hold up at scale.",
+      "Shaped enterprise platform architecture with Spring Boot and React on AWS, including a real-time WebSocket group-chat system built to hold up at scale.",
     tags: ["Spring Boot", "React", "Angular", "AWS", "WebSocket"],
   },
 ];
@@ -90,22 +90,40 @@ export const skillGroups = [
 
 export const projects = [
   {
-    title: "SCA Tool",
+    title: "Sublly",
     description:
-      "Open-source Software Composition Analysis platform — SBOM generation, license compliance, and vulnerability detection. Built the GitHub OAuth flow and the transitive dependency-resolution engine.",
-    tags: ["Java", "Spring Boot", "GitHub API", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-    iconType: "cube" as const,
+      "AI-powered sublet marketplace for short-term rentals across Germany. Built the full Next.js frontend and backend integrations, including AI-generated listing titles, amenity detection from photos, and an AI host assistant that guides users through the listing setup flow.",
+    tags: ["Next.js", "TypeScript", "AI", "PostgreSQL"],
+    liveUrl: "https://sublly.com/en",
+    githubUrl: "",
+    iconType: "home" as const,
   },
   {
-    title: "Enterprise Chat Application",
+    title: "DocuMind",
     description:
-      "Scalable microservices chat platform serving 200+ business customers with real-time WebSocket messaging, presence, and message history.",
-    tags: ["Spring Boot", "Angular", "PostgreSQL", "Redis"],
-    liveUrl: "#",
+      "AI document intelligence platform where users upload PDFs and chat with them using RAG. Built autonomous routing so the AI decides whether to search uploaded documents or the web. Supports OpenAI, Claude and Gemini with isolated per-user document storage via Supabase RLS.",
+    tags: ["Next.js 15", "Supabase", "pgvector", "OpenAI", "RAG"],
+    liveUrl: "",
+    githubUrl: "https://github.com/AbdulHaseeb22/documind",
+    iconType: "brain" as const,
+  },
+  {
+    title: "StreamNet",
+    description:
+      "Production-grade social platform built on Spring Boot microservices with real-time feeds, WebSocket messaging, scheduled posts and full-text search. Twelve independent services coordinated through an API gateway and Kafka event bus, deployed with Docker Compose.",
+    tags: ["Spring Boot", "Kafka", "React", "PostgreSQL", "Redis", "AWS S3"],
+    liveUrl: "",
+    githubUrl: "https://github.com/AbdulHaseeb22/streamnet",
+    iconType: "network" as const,
+  },
+  {
+    title: "SCA Tool",
+    description:
+      "Open-source Software Composition Analysis platform for SBOM generation, license compliance and vulnerability detection. Built the GitHub OAuth flow and the transitive dependency resolution engine that traverses the full package graph.",
+    tags: ["Java", "Spring Boot", "GitHub API", "PostgreSQL"],
+    liveUrl: "",
     githubUrl: "#",
-    iconType: "chat" as const,
+    iconType: "cube" as const,
   },
 ];
 
